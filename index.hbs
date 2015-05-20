@@ -1,0 +1,55 @@
+<div class="scrollable">
+	<header class="header">
+		<div class="header__background"></div>
+		<div class="container">
+			<nav class="header__links">
+					{{#if twitter.show}}
+					<a href="{{ twitter.val }}" target="_blank" data-hover="Twitter">TWITTER</a>
+					{{/if}}
+					{{#if dribbble.show}}
+					<a href="{{ dribbble.val }}" target="_blank" data-hover="Dribbble">DRIBBBLE
+					</a>
+					{{/if}}
+					{{#if linkedIn.show}}
+					<a href="{{ linkedIn.val }}" target="_blank" data-hover="LinkedIn">LINKEDIN</a>
+					{{/if}}
+					{{#if github.show}}
+					<a href="{{ github.val }}" target="_blank" data-hover="Github">GITHUB</a>
+					{{/if}}
+			</nav>
+			<a class="header__email"
+				href="mailto:{{ email.val }}">Email me | <span class="header__email--highlight">{{ email.val }}</span></a>
+		</div>
+	</header>
+
+	<section class="section section--top">
+		<div class="section__content">
+			<div class="avatar">
+				<img class="avatar__img"
+					src="{{ avatar }}">
+			</div>
+			<h1 class="top__title">{{name}}</h1>
+			<p class="top__text">{{about}}</p>
+		</div>
+	</section>
+
+	<section class="section section--projects">
+		<div class="section__content">
+
+			{{#each projects}}
+				{{#if this.show}}
+					<div class="project" data-index="{{@index}}">
+						<div class="project__bg" style="background-image: url({{this.background}})">
+							<div class="project__border">
+								<span class="project__subhead">EXPLORE</span>
+							</div>
+							<h4 class="project__head">{{this.name}}</h4>
+						</div>
+					</div>
+					{{> project this}}
+				{{/if}}
+			{{/each}}
+
+		</div>
+	</section>
+</div>
