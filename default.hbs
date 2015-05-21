@@ -4,21 +4,20 @@
         <title>{{ name }}</title>
         <base href="/">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="/assets/images/platform/favicon.png" />
-        <link rel="shortcut icon" type="image/png" href="/assets/images/platform/favicon.png"/>
+        <meta property="og:image" content="{{assets 'images/favicon.png'}}" />
+        <link rel="shortcut icon" type="image/png" href="{{assets 'images/favicon.png'}}"/>
         <!-- font awesome from BootstrapCDN -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <!-- stylesheet -->
-        <link href='public/reset.css' rel='stylesheet' type='text/css'>
-        <link href='{{ userId }}/theme/assets/css/style.css' rel='stylesheet' type='text/css'>
+        <link href="{{assets 'css/reset.css'}}" rel='stylesheet' type='text/css'>
+        <link href="{{assets 'css/style.css'}}" rel='stylesheet' type='text/css'>
         <!-- fonts -->
         <script src="//use.typekit.net/iez6dma.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <!-- scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script type="text/javascript" src="{{ userId }}/theme/assets/js/main.js"></script>
-        <script type="text/javascript" src="{{ userId }}/theme/assets/js/jquery.bez.min.js"></script>
-        <script src="lib/marked/marked.min.js"></script>
+        <script type="text/javascript" src="{{assets 'js/main.js'}}"></script>
+        <script type="text/javascript" src="{{assets 'js/jquery.bez.min.js'}}"></script>
     </head>
     <body>
     	{{{ body }}}
